@@ -5,6 +5,11 @@ html, body {
     color: white;
 }
 
+/* body {
+    background: url("example-img.jpeg") no-repeat center center fixed;
+    background-size: cover;
+} */
+
 header {
     background-color: rgb(138, 34, 34);
     position: relative;
@@ -13,6 +18,11 @@ header {
 h1 {
     margin: 0;
     padding: 16px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 .dropdown-menu {
@@ -42,7 +52,7 @@ h1 {
     display: none;
     margin: 0;
     padding: 0;
-    background-color: rgb(197, 82, 82);
+    background-color: rgb(138, 34, 34);
 }
 
 .dropdown-menu ul li {
@@ -53,4 +63,75 @@ h1 {
 
 .dropdown-menu ul li:hover {
     background-color: rgb(177, 63, 63);
+}
+
+.slider-container {
+    max-width: 1000px;
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slide-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.slide-img {
+    width: 100%;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-arrow {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+.nav-arrow::after {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    border-top: 8px solid rgba(255, 255, 255, 0.8);
+    border-right: 8px solid rgba(255, 255, 255, 0.8);
+    width: 30px;
+    height: 30px;
+    content: "";
+}
+
+.nav-arrow.previous {
+    left: 0;
+}
+
+.nav-arrow.previous::after {
+    transform: rotate(-135deg);
+    right: 13px;
+}
+
+.nav-arrow.next {
+    right: 0;
+}
+
+.nav-arrow.next::after {
+    transform: rotate(45deg);
+    left: 13px;
 }
